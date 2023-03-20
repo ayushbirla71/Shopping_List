@@ -47,7 +47,7 @@ currencyFormat: {string, enum:[₹,$]},
   - name
   - category
   - totalQuntity
-  - totalQuntity
+  - totalPrice
 - Make sure the unique constraints are not violated when making the update
 - Check if the cart exists. If it doesn't, return an HTTP status 404 with a response body like [this]
 - Return an HTTP status 200 if updated successfully with a body like
