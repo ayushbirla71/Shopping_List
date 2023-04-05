@@ -12,7 +12,7 @@ function App() {
 
   const click = (name, category) => {
     axios
-      .get(`http://localhost:3001/getItems?name=${name}&category=${category}`)
+      .get(`https://shopping-list-dw2m.vercel.app/getItems?name=${name}&category=${category}`)
       .then((res) => {
         setData(res.data.data);
         setPrices(res.data.data.price);
@@ -46,7 +46,7 @@ function App() {
     console.log(Id);
     axios({
       method: "delete",
-      url: "http://localhost:3001/RemoveCart",
+      url: "https://shopping-list-dw2m.vercel.app/RemoveCart",
       data: { _id: Id },
     })
       .then(function (response) {
@@ -70,7 +70,7 @@ function App() {
 
     axios({
       method: "post",
-      url: "http://localhost:3001/CreateCart",
+      url: "https://shopping-list-dw2m.vercel.app/CreateCart",
       data: body,
     })
       .then(function (response) {
@@ -83,7 +83,7 @@ function App() {
   };
   const cartGet = (name, category) => {
     axios
-      .get(`http://localhost:3001/getCart?name=${name}&category=${category}`)
+      .get(`https://shopping-list-dw2m.vercel.app/getCart?name=${name}&category=${category}`)
       .then((res) => {
         setCart(res.data.data);
         // setPrices(res.data.data.price);
